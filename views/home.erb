@@ -1,0 +1,32 @@
+<!-- 
+	ERB Syntax
+There are tons of different templating languages out there that we could use to create dynamic webpages, but the one we're going to work with is called ERB. ERB, Embedded Ruby, is the most commonly used templating language with Ruby web frameworks like Sinatra or Ruby on Rails.
+
+The key concept of ERB is simple: it allows you to write HTML with bits of Ruby code interspersed with regular HTML. Before the template is sent back to the user, it's compiled. This means that any Ruby code in the template is executed, and all we're left with is regular HTML. Take a look at the following simple example ERB template:
+
+ERB(embaded ruby) 템ㄹ릿
+html 상에서 ruby코드를 삽입하여 동적인 웹사이트 구현을 돕는 템플릿
+<% %> 정적인 // <%= %> 동적인 ====> RB코드 적용
+
+<h1>Today's date is <%= Time.now %> </h1>
+
+<% 5.times do %>
+  <h1>Today's date is <%= Time.now %> </h1>
+<% end %>
+
+//실행 부분
+get "/" do
+	erb :home
+end
+// erb 메소드는 자동적으로 views 디렉토리 내의 파일을 찾아 실행.
+ -->
+
+
+<img src="/home.png" class="icon" alt="">
+
+<h1>THIS IS THE HOME PAGE</h1>
+
+<p>
+	Welcome to your first ever Sinatra application
+	Feel free to check out the <a href="/about" title="">about</a> page
+</p>
